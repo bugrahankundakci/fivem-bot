@@ -13,7 +13,6 @@ module.exports = {
             return interaction.reply({ content: 'Bu komutu kullanma yetkiniz bulunmamaktadır.', ephemeral: true });
         }
 
-
         const members = await interaction.guild.members.fetch();
         const userOptions = members.map(member => ({
             label: member.user.tag,
@@ -38,6 +37,7 @@ module.exports = {
         });
 
         const collector = message.createMessageComponentCollector({ time: 20000 });
+
         collector.on('collect', async i => {
             if (i.user.id !== interaction.user.id) return;
 
@@ -53,7 +53,7 @@ module.exports = {
             if (minikinlogodasi) {
                 const minikinwhitelistembedi = new EmbedBuilder()
                     .setTitle('Whitelist Verildi!')
-                    .setDescription(`Yetkili bilgileri:  \n > <@${interaction.user.id}> - (${interaction.user.id}) \n > ${selectedUsers.map(userId => `<@${userId}> - (${userId})`).join('\n')}`)
+                    .setDescription(`Yetkili bilgileri:  \n > <@${interaction.user.id}> - (${interaction.user.id}) \n\n Whitelist Verilenler: \n > ${selectedUsers.map(userId => `<@${userId}> - (${userId})`).join('\n')}`)
                     .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
                     .setFooter({ text: minik.reklam.minikisim, iconURL: minik.reklam.minikprofile })
                     .setTimestamp();
@@ -62,16 +62,20 @@ module.exports = {
                 console.error('Rol log kanalı bulunamadı!');
             }
 
-            await interaction.editReply({ content: `Seçilen kullanıcılara **${minik.rol.kayitli}** rolü verildi: ${selectedUsers.map(userId => `<@${userId}>`).join(', ')}` });
+            await interaction.editReply({ content: `Seçilen kullanıcılara **<@&${minik.rol.whitelist}>** rolü verildi: ${selectedUsers.map(userId => `<@${userId}>`).join(', ')}`, components: [] });
             collector.stop();
-            await message.edit({ components: [] });
         });
 
         collector.on('end', async collected => {
             if (!collected.size) {
-                await interaction.editReply({ content: 'Zaman aşımına uğradı. Herhangi bir kullanıcı seçilmedi.' });
+                try {
+                    await interaction.editReply({ content: 'Zaman aşımına uğradı. Herhangi bir kullanıcı seçilmedi.', components: [] });
+                } catch (error) {
+                    if (error.code !== 10008) { // Sadece 10008 hatası değilse logla
+                        console.error('Zaman aşımı mesajı düzenlenirken bir hata oluştu:', error);
+                    }
+                }
             }
-            await message.edit({ components: [] });
         });
     },
 };

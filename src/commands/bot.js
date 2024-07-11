@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, ChannelType, PermissionFlagsBits, ActionRowBuilder, SelectMenuBuilder } = require('discord.js');
+const { SlashCommandBuilder, ChannelType, PermissionFlagsBits, ActionRowBuilder, StringSelectMenuBuilder } = require('discord.js');
 const minik = require('../../minik.json');
 
 module.exports = {
@@ -59,7 +59,8 @@ module.exports = {
     if (interaction.options.getString('log_kurulum')) {
       await interaction.deferReply({ content: `Log odaları kuruluyor...`, ephemeral: true });
       try {
-        const category = await interaction.guild.channels.create('minik', {
+        const category = await interaction.guild.channels.create({
+          name: 'minik',
           type: ChannelType.GuildCategory,
           permissionOverwrites: [{
             id: interaction.guild.roles.everyone.id,
@@ -75,9 +76,10 @@ module.exports = {
         });
 
         for (const channelName of logChannels) {
-          await interaction.guild.channels.create(channelName, {
+          await interaction.guild.channels.create({
+            name: channelName,
             type: ChannelType.GuildText,
-            parent: category,
+            parent: category.id,
           });
         }
 
@@ -110,10 +112,10 @@ module.exports = {
     }
 
     if (interaction.options.getString('burcmenu')) {
-      const burcmenucontent = interaction.options.getString('burcmenu')
+      const burcmenucontent = interaction.options.getString('burcmenu');
       const row = new ActionRowBuilder()
         .addComponents(
-          new SelectMenuBuilder()
+          new StringSelectMenuBuilder()
             .setCustomId('burcMenu')
             .setPlaceholder('Bir Burç seçin...')
             .addOptions([
@@ -236,7 +238,7 @@ module.exports = {
       const renkmenucontent = interaction.options.getString('renkmenu');
       const row = new ActionRowBuilder()
         .addComponents(
-          new SelectMenuBuilder()
+          new StringSelectMenuBuilder()
             .setCustomId('renkMenu')
             .setPlaceholder('Bir renk seçin...')
             .addOptions([

@@ -53,7 +53,8 @@ module.exports = {
       'ban_log',
       'whitelist_log',
       'nick_log',
-      'whitelist_log'
+      'whitelist_log',
+      'minik_log'
     ];
 
     if (interaction.options.getString('log_kurulum')) {

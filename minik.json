@@ -1,0 +1,101 @@
+{
+    "botSettings": {
+        "token": "BU BOŞLUĞA BOTUN TOKENİNİ GİRİCEKSİN",
+        "ServerID": "BU BOŞLUĞA SUNUCUNUN ID'SINI GIRICEKSIN",
+        "clientID": "BU BOŞLUĞA BOTUN DİSCORD ID'SINI GIRICEKSIN (CLIENT ID)",
+        "durum": "BU BOŞLUĞA BOT DURUMUNU GIRICEKSIN ( dnd - invisible - online - idle)",
+        "oynuyor": "BU BOŞLUĞA BOTTA NE YAZICAK ÖRN: ALLAHIN AMINA KAFA ATIYOR, ANNENLE ÇAY BAHÇESİNDE SİKİŞME",
+        "mongo": "BU BOŞLUĞA MONGO LINKINIZI GIRICEKSINIZ. örn: mongodb+srv://adanaliyarragimiye:adanaliyarragimiye@cluster0.6fe3zbo.mongodb.net/adanaliyarragimiye?retryWrites=true&w=majority&appName=adanaliyarragimiye"
+    },
+
+    "yetkili": {
+        "kayit": ["BU BOŞLUĞA", "KAYIT YETKİLİLERİNİN", "DISCORDDAKI ROL ID'LERINI GIRICEKSIN"],
+
+        "yasaklama": "BU BOŞLUĞA BAN YETKİLİLERİNİN ROL ID'SINI GIRICEKSIN",
+        "rol": ["BU BOŞLUĞA DISCORDDAKI ROL ID'LERINI GIR AMA BU ROL ONEMLİ AMK ÇÜNKÜ : toplu rol verme + mesajları sildirme + rolbilgisi atma + rol verme GİBİ ŞEYLERİ YAPABİLİYOR."],
+        "aktifmaktif": "BU BOŞLUĞA SUNUCUDA AKTİF BAKIM RESTART ATABİLİCEK OLAN ANDAVALLARIN ROL ID'LERINI GIRICEKSIN AMK",
+        "kurucu": "BU BOŞLUĞA KURUCU ROLÜ ID'SINI GIR AMK (ÇEKİLİŞ MEKİLİŞ ATABİLİYOR Bİ BOK YOK ASLINDA)"
+    },
+
+    "rol": {
+        "kayıtsız": "BU BOŞLUĞA KAYITSIZ ROL ID'SINI GIR",
+        "whitelist": ["BU BOŞLUĞA", "WHİTELIST ROL ID'SINI GIR AMK"],
+        "blacklist": ["BU BOŞLUĞA", "BLACKLİST, NON WH ROLLERİNİN ID'LERINI GIR"]
+    },
+
+
+    "kanal": {
+        "welcome": "BU BOŞLUĞA WELCOME KANAL ID GIR",
+        "kurallar": "BU BOŞLUĞA KURALLARIN OLDUĞU KANAL ID GIR",
+        "duyurular": "BU BOŞLUĞA DUYURULARIN OLDUĞU KANAL ID GIR",
+        "hatakanali": "BU BOŞLUĞA BOTTA HATA OLDUĞUNDA HATAYI ATACAĞI KANAL ID GIR",
+        "chat": "BU BOŞLUĞA CHAT'IN OLDUĞU KANAL ID GIR",
+
+
+        "ozelodakategori": "BU BOŞLUĞA ÖZEL ODA AÇTIĞINDA ÖZEL ODAYI HANGİ KATEGORİDE AÇILICAKSA O KATEGORİNİN ID'SINI GİR.",
+        "ozeloda": "BU BOŞLUĞA BİR SES KANALI ID'SI GIRICEKSIN MESELA BEN 3453948759345 İD'Lİ ODAYA GİRDİĞİMDE BANA ÖZEL ODA AÇIP O ODAYA ÇEKİYOR HANGİ KANALA GİRİNCE ÖZEL ODA OLUŞTURMASINI İSTİYORSAN O SESLI KANALIN ID'SINI GIR"
+    },
+
+    "server": {
+        "serverismi": "BU BOŞLUĞA FİVEM SUNUCUNUZUN ADINI GIRIN.",
+        "cfxlink": "BU BOŞLUĞA CFX LİNKINIZI GIRIN. örn: https://cfx.re/join/link", 
+        "aktiftasarim": "BU BOŞLUĞA TASARIMLARINIZIN LINKINI GIRIN. örn: https://cdn.discordapp.com/avatars/205638637080150016/a_53657df5c4797f31e2f7b61ef2f84374.gif?size=1024",
+        "bakimtasarim": "BU BOŞLUĞA TASARIMLARINIZIN LINKINI GIRIN. örn: https://cdn.discordapp.com/avatars/205638637080150016/a_53657df5c4797f31e2f7b61ef2f84374.gif?size=1024",
+        "restarttasarim": "BU BOŞLUĞA TASARIMLARINIZIN LINKINI GIRIN. örn: https://cdn.discordapp.com/avatars/205638637080150016/a_53657df5c4797f31e2f7b61ef2f84374.gif?size=1024",
+        "ip": "FIVEM SUNUCUNUZUN IP'SINI GIRIN.",
+        "tsip": "VARSA TS IP YOKSA sunucumuzda voice-chat aktiftir."
+    },
+
+    "reklam": {
+        "minikprofillink": "https://discord.com/users/205638637080150016",
+        "minikdcid": "205638637080150016",
+        "minikisim": "Militan.",
+        "minikprofile": "https://cdn.discordapp.com/avatars/205638637080150016/a_53657df5c4797f31e2f7b61ef2f84374.gif?size=1024",
+        "fordevelopment": "ttps://discord.gg/1742",
+        "embedphoto": "https://media.discordapp.net/attachments/1243236746813247639/1260895216399814717/image.png?ex=6690fbad&is=668faa2d&hm=3b8b2e2c7286a865748ea6cf24ad787f022edd2365e83a72c7ad9954c3703de2&=&format=webp&quality=lossless&width=393&height=8"
+        },
+
+    "log": {
+        "rolguncelleme": true
+    },
+    "ticket": {
+        "ticketName": "ticket-",
+        "ticketDescription": "🌿 ticketi açan kişi:",
+        "ticketCreate": "✅ ticketin başarıyla açıldı!",
+        "ticketButtonCreated": "Açık Ticket'ına bak",
+        "ticketButtonCreatedEmoji": "👀",
+        "ticketAlreadyExist": "Zaten ticketin açık",
+        "ticketNoPermissions": "maalesef buna yetkin bulunmuyor",
+        "ticketError": "Bir şeyler ters gitti, daha sonra tekrar deneyin.",
+        "ticketMessageTitle": "Ticket",
+        "ticketMessageDescription": "Ilgılı departmanımız sizinle ilgilenicek.\n Sakin ve iyi bir ruh hali içinde beklediğiniz için teşekkür ederiz",
+        "ticketClose": "Kapat",
+        "ticketCloseEmoji": "📪",
+        "ticketLock": "Kilitle",
+        "ticketLockEmoji": "🔒",
+        "ticketUnlock": "Kilit Aç",
+        "ticketUnlockEmoji": "🔓",
+        "ticketClaim": "Devir Al",
+        "ticketClaimEmoji": "👋",
+        "ticketManage": "Üye Ekle!",
+        "ticketManageEmoji": "➕",
+        "ticketManageMenuTitle": "Kişiyi seç.",
+        "ticketManageMenuEmoji": "❔",
+        "ticketCloseTitle": "Ticket şu anda kapanıyor...",
+        "ticketCloseDescription": "Ticket 5 saniye sonra kapatılacak.",
+        "ticketSuccessLocked": "Ticket başarıyla kilitlendi.",
+        "ticketAlreadyLocked": "Bu Ticket zaten kilitli.",
+        "ticketSuccessUnlocked": "Ticketin kilidi başarıyla açıldı.",
+        "ticketAlreadyUnlocked": "Bu Ticketin kilidi zaten açık.",
+        "ticketSuccessClaim": "Ticket tarafından başarıyla talep edildi",
+        "ticketAlreadyClaim": "Ticket zaten alındı!",
+        "ticketDescriptionClaim": ", tarafından devir alındı!",
+        "ticketTranscriptMember": "Kişi:",
+        "ticketTranscriptTicket": "Ticket id:",
+        "ticketTranscriptClaimed": "Devir Alan:",
+        "ticketTranscriptModerator": "Yetkili:",
+        "ticketTranscriptTime": "Zaman:",
+        "ticketMemberAdd": "Tickete eklendi.",
+        "ticketMemberRemove": "Tickete kaldırıldı."
+    }
+}

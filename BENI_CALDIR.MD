@@ -1,0 +1,1 @@
+içerisinde menülü renk / burç rolleri alma menüsü ve özel oda sistemi de dahil olan herşeyi çalışan hatasız bot.

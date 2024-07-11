@@ -5,3 +5,6 @@
 - Ücretsiz!
 - Birçok Komut!
 - Tüm Loglar!
+
+
+# Botta hatalar olabilir. Fixleyip kullanabilirsiniz.

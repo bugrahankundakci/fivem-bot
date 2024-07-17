@@ -5,7 +5,7 @@ const { Routes } = require('discord-api-types/v9');
 const minik = require('./minik.json');
 const {JsonDatabase} = require("wio.db");
 const { connect, mongoose } = require('mongoose');
-const eventHandlers = require('./src/handlers/eventHandlers');
+const eventHandlers = require('./src/handlers/eventHandler');
 const { commandMap } = require('./src/handlers/commandHandler');
 const db = minik.db = new JsonDatabase({databasePath:"./minik_database.json"});
 

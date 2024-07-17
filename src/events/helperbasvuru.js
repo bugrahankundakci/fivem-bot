@@ -70,7 +70,7 @@ module.exports = {
             const minikinhelperactionu = new ActionRowBuilder()
             .addComponents(
                 new ButtonBuilder()
-                .setCustomid('minikinhelperkabulbutonu')
+                .setCustomId('minikinhelperkabulbutonu')
                 .setLabel('Kabul Et')
                 .setStyle(ButtonStyle.Success),
                 new ButtonBuilder()

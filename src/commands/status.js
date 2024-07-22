@@ -40,20 +40,26 @@ module.exports = {
                     .setThumbnail(userAvatarURL)
                     .setImage(minik.server.aktiftasarim)
                     .setTimestamp();
-                components = new ActionRowBuilder().addComponents(
-                    new ButtonBuilder()
-                        .setLabel('Sunucuya Katıl!')
-                        .setStyle(ButtonStyle.Link)
-                        .setURL(minik.server.cfxlink),
-                    new ButtonBuilder()
-                        .setLabel(minik.server.tsip)
-                        .setStyle(ButtonStyle.Success)
-                        .setCustomId('tsye_katil'),
-                    new ButtonBuilder()
-                        .setLabel('For Development')
-                        .setStyle(ButtonStyle.Link)
-                        .setURL(minik.reklam.minikprofillink)
-                );
+                components = [
+                    new ActionRowBuilder().addComponents(
+                        new ButtonBuilder()
+                            .setLabel('Sunucuya Katıl!')
+                            .setStyle(ButtonStyle.Link)
+                            .setURL(minik.server.cfxlink)
+                    ),
+                    new ActionRowBuilder().addComponents(
+                        new ButtonBuilder()
+                            .setLabel(minik.server.tsip)
+                            .setStyle(ButtonStyle.Success)
+                            .setCustomId('tsye_katil')
+                    ),
+                    new ActionRowBuilder().addComponents(
+                        new ButtonBuilder()
+                            .setLabel('For Development')
+                            .setStyle(ButtonStyle.Link)
+                            .setURL(minik.reklam.minikprofillink)
+                    )
+                ];
                 break;
             case 'bakım':
                 embed = new EmbedBuilder()
@@ -67,12 +73,14 @@ module.exports = {
                     .setThumbnail(userAvatarURL)
                     .setImage(minik.server.bakimtasarim)
                     .setTimestamp();
-                components = new ActionRowBuilder().addComponents(
-                    new ButtonBuilder()
-                        .setLabel('For Development')
-                        .setStyle(ButtonStyle.Link)
-                        .setURL(minik.reklam.minikprofillink)
-                );
+                components = [
+                    new ActionRowBuilder().addComponents(
+                        new ButtonBuilder()
+                            .setLabel('For Development')
+                            .setStyle(ButtonStyle.Link)
+                            .setURL(minik.reklam.minikprofillink)
+                    )
+                ];
                 break;
             case 'restart':
                 embed = new EmbedBuilder()
@@ -86,18 +94,20 @@ module.exports = {
                     .setThumbnail(userAvatarURL)
                     .setImage(minik.server.restarttasarim)
                     .setTimestamp();
-                components = new ActionRowBuilder().addComponents(
-                    new ButtonBuilder()
-                        .setLabel('For Development')
-                        .setStyle(ButtonStyle.Link)
-                        .setURL(minik.reklam.minikprofillink)
-                );
+                components = [
+                    new ActionRowBuilder().addComponents(
+                        new ButtonBuilder()
+                            .setLabel('For Development')
+                            .setStyle(ButtonStyle.Link)
+                            .setURL(minik.reklam.minikprofillink)
+                    )
+                ];
                 break;
             default:
                 return interaction.reply({ content: 'Geçersiz durum.', ephemeral: true });
         }
 
         await interaction.reply({ content: 'Durum güncellendi.', ephemeral: true });
-        await channel.send({ content: '||@everyone|| & ||@here||', embeds: [embed], components: [components] });
+        await channel.send({ content: '||@everyone|| & ||@here||', embeds: [embed], components });
     },
 };

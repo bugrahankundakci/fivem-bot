@@ -4,7 +4,7 @@
         "ServerID": "BU BOŞLUĞA SUNUCUNUN ID'SINI GIRICEKSIN",
         "clientID": "BU BOŞLUĞA BOTUN DİSCORD ID'SINI GIRICEKSIN (CLIENT ID)",
         "durum": "BU BOŞLUĞA BOT DURUMUNU GIRICEKSIN ( dnd - invisible - online - idle)",
-        "oynuyor": "BU BOŞLUĞA BOTTA NE YAZICAK ÖRN: ALLAHIN AMINA KAFA ATIYOR, ANNENLE ÇAY BAHÇESİNDE SİKİŞME",
+        "oynuyor": "BU BOŞLUĞA BOTTA NE YAZICAK ÖRN: ANANIN AMINA KAFA ATIYOR, ANNENLE ÇAY BAHÇESİNDE SİKİŞME",
         "mongo": "BU BOŞLUĞA MONGO LINKINIZI GIRICEKSINIZ. örn: mongodb+srv://adanaliyarragimiye:adanaliyarragimiye@cluster0.6fe3zbo.mongodb.net/adanaliyarragimiye?retryWrites=true&w=majority&appName=adanaliyarragimiye"
     },
 
